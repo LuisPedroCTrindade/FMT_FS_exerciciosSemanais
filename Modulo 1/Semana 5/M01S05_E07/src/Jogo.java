@@ -79,6 +79,28 @@ public class Jogo {
         } while (true);
     }
 
+    public void jogar(int num) {
+        adicionarJogada();
+
+        int numeroMisterioso = gerarNumeroAleatorio();
+
+        System.out.println("Você chutou o número " + num + ".");
+        System.out.println("O número misterioso era " + numeroMisterioso + ". \n");
+
+         if (num == numeroMisterioso) {
+             jogadorAtual.adicionaPontos(1);
+             System.out.println("VOCÊ ACERTOU! :) \n");
+         } else {
+             System.out.println("Você errou... :( \n");
+         }
+    }
+
+    private int gerarNumeroAleatorio() {
+        Random numeroAleatorioGerado = new Random();
+
+        return (int) numeroAleatorioGerado.nextInt(10) + 1;
+    }
+
     private void adicionarJogada() {
         numeroJogosTotais++;
     }
@@ -143,7 +165,7 @@ public class Jogo {
             if (i == 10) {
                 break;
             }
-            System.out.println(gerarRanking().get(i) + " - " + (i + 1) + "º lugar");
+            System.out.println((i + 1) + "º lugar - " + gerarRanking().get(i) + " (" + jogadorAtual.getPontuacao() + " pt(s).)");
         }
         System.out.println("----------------------");
 
@@ -152,7 +174,7 @@ public class Jogo {
         int rankingJogadorAtual = gerarRanking().indexOf(jogadorAtual);
 
         //PRINTANDO INFORMAÇÕES DO JOGADOR ATUAL DEPOIS DO TOP 10
-        System.out.println(nomeJogadorAtual + ", você ficou em " + (rankingJogadorAtual + 1) + "º lugar no ranking!");
+        System.out.println(nomeJogadorAtual + ", você está em " + (rankingJogadorAtual + 1) + "º lugar no ranking! \n");
     }
 
     public void exibirListaRegistrados() {
