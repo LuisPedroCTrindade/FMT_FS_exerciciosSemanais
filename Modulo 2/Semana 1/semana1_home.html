@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="semana1_home.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>LabQuiz</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">LabQuiz</h1>
+    <p class="descricao">Boas-vindas ao <strong class="destaque">LabQuiz</strong>, uma página criada por Luís Pedro Trindade como exercício prático de HTML e CSS da semana 1 do módulo 2 do Floripa Mais Tec.</p>
+    <div class="linha"></div>
+    <form class="formNome">
+        <label for="nome">Para começarmos, informe seu <strong class="destaque">nome</strong> abaixo.</label>
+        <input id="nome" type="text" placeholder="Ex.: Ariel Pereira" />
+        <button>iniciar</button>
+    </form>
+    </header>
+
+    <main>
+        <h1 class="tituloPerguntas">perguntas</h1>
+        <form class="formMain">
+
+            <label class="enunciado" for="quest1">1) Como se define um estilo inline em HTML?</label>
+            <input id="quest1" type="text" placeholder="Insira sua resposta..." />
+
+            <div class="pergunta quest2">
+                <div class="enunciado">2) Qual é a tag usada para criar uma lista ordenada em HTML?</div>
+                    <input class="radioInput" id="quest2a" type="radio" value="ol" />
+                    <label class="radioLabel" for="quest2a">ol</label>
+                    <input class="radioInput" id="quest2b" type="radio" value="ul" />
+                    <label class="radioLabel" for="quest2b">ul</label>
+                    <input class="radioInput" id="quest2c" type="radio" value="li" />
+                    <label class="radioLabel" for="quest2c">li</label>
+                    <input class="radioInput" id="quest2d" type="radio" value="order-list" />
+                    <label class="radioLabel" for="quest2d">order-list</label>
+            </div>
+
+            <div class="pergunta quest3">
+                <div class="enunciado">3) Qual propriedade CSS é usada para alterar a cor do texto?</div>
+                    <input class="radioInput" id="quest3a" type="radio" value="font-color" />
+                    <label class="radioLabel" for="quest3a">font-color</label>
+                    <input class="radioInput" id="quest3b" type="radio" value="color" />
+                    <label class="radioLabel" for="quest3b">color</label>
+                    <input class="radioInput" id="quest3c" type="radio" value="background-color" />
+                    <label class="radioLabel" for="quest3c">background-color</label>
+                    <input class="radioInput" id="quest3d" type="radio" value="text-color" />
+                    <label class="radioLabel" for="quest3d">text-color</label>
+            </div>
+
+            <label class="enunciado for="quest4">4) Como se referencia um arquivo CSS externo em um documento HTML?</label>
+            <input id="quest4" type="text" placeholder="Insira sua resposta..." />
+
+            <div class="pergunta quest5">
+                <div class="enunciado">5) "Font-size" é a propriedade CSS usada para alterar o tamanho da fonte de um texto?</div>
+                    <input class="radioInput" id="quest5a" type="radio" value="sim" />
+                    <label class="radioLabel" for="quest5a">sim</label>
+                    <input class="radioInput" id="quest5b" type="radio" value="nao" />
+                    <label class="radioLabel" for="quest5b">não</label>
+            </div>
+
+            <div class="pergunta quest6">
+                <div class="enunciado">6) Qual é a propriedade CSS usada para definir a largura de um elemento?</div>
+                    <input class="checkInput" id="quest6a" type="checkbox" value="height" />
+                    <label class="checkLabel" for="quest6a">height</label>
+                    <input class="checkInput" id="quest6b" type="checkbox" value="size" />
+                    <label class="checkLabel" for="quest6b">size</label>
+                    <input class="checkInput" id="quest6c" type="checkbox" value="width" />
+                    <label class="checkLabel" for="quest6c">width</label>
+                    <input class="checkInput" id="quest6d" type="checkbox" value="max-width" />
+                    <label class="checkLabel" for="quest6d">max-width</label>
+            </div>
+
+            <div class="pergunta quest7">
+                <div class="enunciado">7) Como se cria um comentário em CSS?</div>
+                    <input class="checkInput" id="quest7a" type="checkbox" value="html" />
+                    <label class="checkLabel" for="quest7a">/comment/</label>
+                    <input class="checkInput" id="quest7b" type="checkbox" value="java" />
+                    <label class="checkLabel" for="quest7b">//</label>
+                    <input class="checkInput" id="quest7c" type="checkbox" value="css" />
+                    <label class="checkLabel" for="quest7c">/* */</label>
+            </div>
+
+            <div class="pergunta quest8">
+                <div class="enunciado">8) Qual é a propriedade CSS usada para definir a altura de um elemento?</div>
+                    <input class="checkInput" id="quest8a" type="checkbox" value="height" />
+                    <label class="checkLabel" for="quest8a">height</label>
+                    <input class="checkInput" id="quest8b" type="checkbox" value="size" />
+                    <label class="checkLabel" for="quest8b">size</label>
+                    <input class="checkInput" id="quest8c" type="checkbox" value="min-height" />
+                    <label class="checkLabel" for="quest8c">min-height</label>
+                    <input class="checkInput" id="quest8d" type="checkbox" value="max-height" />
+                    <label class="checkLabel" for="quest8d">max-height</label>
+            </div>
+            <button>Confirmar</button>
+            <div class="linha"></div>
+        </form>
+    </main>
+
+    <footer>
+        <Desenvolvido>&copy;Copyright 2024 - Desenvolvido por <a href="https://github.com/LuisPedroCTrindade">Luís Pedro Trindade</a>.</p>
+    </footer>
+</body>
+</html>
