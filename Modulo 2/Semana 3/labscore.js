@@ -1,13 +1,3 @@
-// let notas = [7.5, 8.0, 9.5, 6.0];
-// let media = calcularMedia(notas);
-
-// let listaAlunos = ["Pedro", "Joana", "Eliza", "João"];
-// imprimirNomes(listaAlunos);
-
-// pedirInformacoes();
-
-
-
 //Ex. 01 - CALCULAR MÉDIA
 function calcularMedia(arrayNotas) {
     let soma = 0;
