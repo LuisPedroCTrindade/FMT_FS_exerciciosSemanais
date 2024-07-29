@@ -1,0 +1,33 @@
+<h1>Lista de Alunos</h1>
+
+<div class="box-container-pesquisa">
+        <input type="text" placeholder="Pesquisar por nome ou e-mail" [(ngModel)]="pesquisa">
+        <button (click)="filtrarAlunos()">Pesquisar</button>
+</div>
+
+<div class="box-tabela">
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>E-mail</th>
+                <th>Curso</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aluno of alunosFiltrados">
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.cpf }}</td>
+                <td>{{ aluno.email }}</td>
+                <td>{{ aluno.curso }}</td>
+                <td>
+                    <button (click)="editarAluno(aluno)">Editar</button>
+                    <button (click)="excluirAluno(aluno)">Excluir</button>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

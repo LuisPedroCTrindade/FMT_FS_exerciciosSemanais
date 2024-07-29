@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-geral {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .box-container-form {
+        width: 300px;
+        height: auto;
+
+        padding: 2em;
+    
+        border: 1px solid black;
+    
+        form {
+            height: 100%;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .container-botao {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                margin-top: 2em;
+
+                button {
+                    width: 6em;
+                    height: 3em;
+                    padding: 0.5em;
+                }
+            }
+        }
+    }
+
+    h1 {
+        text-align: center;
+
+        margin-bottom: 1em;
+    }
+
+    .container-ajuda {
+        width: 300px;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        margin-top: 1.5em;
+    }
+}

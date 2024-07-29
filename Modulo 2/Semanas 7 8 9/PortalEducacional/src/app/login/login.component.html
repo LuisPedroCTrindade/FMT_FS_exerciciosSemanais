@@ -1,0 +1,20 @@
+<div class="container-geral">
+    <h1>Login</h1>
+
+    <div class="box-container-form">
+        <form (ngSubmit)="onLogin()">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" [(ngModel)]="email" required>
+    
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" [(ngModel)]="senha" required>
+        
+            <div class="container-botao">
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+    </div>
+    <div class="container-ajuda">
+        <a href="/login" (click)="esqueciMinhaSenha()">Esqueceu a senha?</a>
+    </div>
+</div>
