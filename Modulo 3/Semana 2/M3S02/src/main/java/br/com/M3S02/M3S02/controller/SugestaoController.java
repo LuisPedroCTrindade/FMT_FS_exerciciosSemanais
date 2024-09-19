@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/sugestoes")
+@CrossOrigin(origins = "http://localhost:4200")
 public class SugestaoController {
 
     @Autowired

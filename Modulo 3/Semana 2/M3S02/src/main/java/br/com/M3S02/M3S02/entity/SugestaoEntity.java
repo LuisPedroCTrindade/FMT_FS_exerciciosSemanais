@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Data
@@ -25,22 +26,22 @@ public class SugestaoEntity {
     private String descricao;
 
     @Column(nullable = false)
-    private LocalDateTime dataEnvio;
+    private Date dataEnvio;
 
     @Column(nullable = false)
-    private LocalDateTime dataAtualizacao;
+    private Date dataAtualizacao;
 
 
 
 
     @PrePersist
     protected void onCreate() {
-        dataEnvio = LocalDateTime.now();
-        dataAtualizacao = LocalDateTime.now();
+        dataEnvio = new Date();
+        dataAtualizacao = new Date();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        dataAtualizacao = LocalDateTime.now();
+        dataAtualizacao = new Date();
     }
 }

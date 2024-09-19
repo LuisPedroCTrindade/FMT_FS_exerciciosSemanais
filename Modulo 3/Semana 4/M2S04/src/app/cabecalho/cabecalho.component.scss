@@ -1,0 +1,24 @@
+$branco: #ffffff;
+$cor1: #3498db;
+$cor2: #2ecc71;
+
+.box {
+    width: 100%;
+    height: 100px;
+    background-color: $cor1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+
+        h1 {
+            font-family: sans-serif;
+            color: $branco;
+        }
+    }
+}

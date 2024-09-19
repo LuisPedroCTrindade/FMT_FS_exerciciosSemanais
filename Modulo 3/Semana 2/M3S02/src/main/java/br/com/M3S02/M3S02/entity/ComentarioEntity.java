@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Data
@@ -26,11 +27,11 @@ public class ComentarioEntity {
     private String texto;
 
     @Column(nullable = false)
-    private LocalDateTime dataEnvio;
+    private Date dataEnvio;
 
 
     @PrePersist
     protected void onCreate() {
-        dataEnvio = LocalDateTime.now();
+        dataEnvio = new Date();
     }
 }

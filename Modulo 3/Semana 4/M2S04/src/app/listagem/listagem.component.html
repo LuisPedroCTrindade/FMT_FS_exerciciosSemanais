@@ -1,0 +1,49 @@
+<body>
+    <section class="cabecalho">
+        <app-cabecalho></app-cabecalho>
+    </section>
+
+
+    <main>
+        <div class="pesquisa">
+            <input
+              type="text"
+              [(ngModel)]="pesquisaTermo"
+              placeholder="Pesquisar por título"
+            />
+            <button (click)="pesquisar()">Pesquisar</button>
+          </div>
+
+        <div class="loading-box">
+            <h3 **ngIf="isLoading">Carregando...</h3>
+            <h3 *ngIf="!isLoading && sugestoes.length === 0">Nenhuma sugestão encontrada.</h3>
+        </div>
+        
+        <div class="sugestoes-box">
+            <table *ngIf="!isLoading && sugestoes.length > 0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Descrição</th>
+                        <th>Data de envio</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let sugestao of filtradas">
+                        <td>{{ sugestao.id }}</td>
+                        <td>{{ sugestao.titulo}}</td>
+                        <td>{{ sugestao.descricao}}</td>
+                        <td>{{ sugestao.dataEnvio | date: 'dd/mm/yyyy'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <section class="rodape">
+        <app-rodape></app-rodape>
+    </section>
+
+</body>
